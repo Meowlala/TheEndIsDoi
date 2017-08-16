@@ -1,0 +1,507 @@
+SetName NormalSounds
+Folder sfx
+
+SoundEffectBaseConstants { #relevant group properties are multiplied by these
+    volume 1
+    pitch 1
+
+    pan_falloff_range [1, 54]
+    volume_falloff_range [10, 60]
+
+    distance_scale [1, 1] # scales x, y distance by following value (so sound spreads farther horizontally than vertically, etc)
+
+    falloff_mode linearsquare
+}
+
+SoundEffectGroups {
+    # Example {                                  # the name of the sound effect trigger for the engine to access (PlaySound("Example"))
+    #    files [file1.wav, file2.wav, file3.wav] # triggering this sound chooses 1 file from here at random
+    #    pitch 5                                 # shortcut for pitch_range [5,5]  (constant pitch)
+    #    volume 5                                # shortcut for volume_range [5,5] (constant volume)
+    #    pitch_range [.8, 1.2]                   # pitch randomized between .8 and 1.2
+    #    volume_range [.8, 1.2]                  # volume randomized between .8 and 1.2
+    #    falloff .5                              # multiplied by volume_falloff_range global setting
+    #    falloff_range [1, 1]                    # same but as a range [.5, 2] with a base settingh of [10, 20] results in a new range of [5, 40]
+    #    pan_falloff .5                          # multiplied by pan_falloff_range global setting (should not need)
+    #    pan_falloff_range [1, 1]                # same but as a range [.5, 2] with a base settingh of [10, 20] results in a new range of [5, 40] (should not need)
+    # }
+
+    #playersounds
+    Jump { #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .65
+        pitch_range [1, 1.2]
+    }
+
+    Collide { #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .75
+        pitch_range [.8, 1.2]
+    }
+
+    LandSoft { #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .9
+        pitch_range [.8, 1.2]
+    }
+
+    LandHard { #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+        pitch_range [.8, 1]
+    }
+
+    LedgeGrab { #testlevels: anywhere
+    files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+        pitch_range [1, 1.1]
+    }
+
+    Death { #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+
+    UnderwaterDeath{
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.1
+    }
+
+    DrownDeath{
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.1
+}
+
+    Splash { #testlevels: 3-0
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.5
+        pitch_range [.8, 1.2]
+        falloff .7
+    }
+
+    Boing { #testlevels: 2-7
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    EnemyBounce { #testlevels: 2-13
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.3
+        pitch_range [.8, 1.2]
+    }
+
+    LedgeJump {  #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .9
+        pitch_range [1, 1.2]
+    }
+    FastFall {  #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+        pitch_range [.8, 1]
+    }
+    FastFall_Threshold {  #testlevels: anywhere
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    Drown1 {  #testlevels: 3-8, 6-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+    Drown2 {  #testlevels: 3-8, 6-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+    Drown3 {  #testlevels: 3-8, 6-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+
+    BackWarp {  #testlevels: 1xd-2
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+
+    CollectLife {  #testlevels: 1-1
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .9
+    }
+
+    CollectBigLife {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+
+    CollectHead{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+
+    CollectBody{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+
+    CollectHeart{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+
+    CollectKey{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+    }
+
+
+    WarpEnter {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+
+    WarpExit {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+
+    CollectCart {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+
+    LandCloudHard {
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+        pitch_range [.8,1.2]
+    }
+
+    LandCloudSoft {
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+        pitch_range [.8,1.2]
+    }
+    #environment sounds
+    Rumble {  #testlevels: 1-13, 1-16
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+        pitch_range[.8,1.2]
+        falloff .85
+    }
+
+    CrashSoft {  #testlevels: 1-13, 1-16
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        pitch_range [.8,1]
+        volume 1
+        falloff .9
+    }
+
+    CrashHard {  #testlevels: 1-13, 1-16
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        falloff 1
+    }
+
+    CrashThwamp {  #testlevels: 5a-17
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        pitch_range [.8, 1.2]
+        volume 1
+    }
+
+    CrashHellThwamp {  #testlevels: 5c-16
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        pitch_range [.8, 1.2]
+        volume 1
+    }
+
+    Crumble {  #testlevels: 1-10, 6-13
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    Click {  #testlevels: 5bxd-6
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    RockSmash {  #testlevels: 4c-2
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+        pitch_range [.8, 1]
+    }
+
+    MineExplode{
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        pitch_range [.8,1]
+        volume 1
+    }
+
+    TVTurnOn{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .7
+    }
+
+    ConsoleUp{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .5
+        falloff 999
+        pan_falloff 999
+    }
+
+    ConsoleDown{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .5
+        falloff 999
+        pan_falloff 999
+    }
+
+    MapOpen{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        falloff 999
+        pan_falloff 999
+    }
+
+    StevenMunch{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+    }
+
+    SpikeToggle{
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        falloff 999
+        pan_falloff 999
+    }
+
+    BlockToggle{
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+        falloff 999
+        pan_falloff 999
+    }
+
+    #misc enemy noises
+    BirdFlap {  #testlevels: 4a-7, 4a-8
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [1, 1.2]
+        falloff .3
+    }
+
+    Caw {  #testlevels: 4a-7, 4a-8
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+        pitch_range [1, 1.2]
+    }
+
+    ChompIdle {  #testlevels: 5c-1, 5c-3
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .7
+        pitch_range 1
+        falloff .33
+    }
+
+    ChompDash {  #testlevels: 5c-1, 5c-3
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    DemonIdle {  #testlevels: 5c-10, 5cx-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .9
+        pitch_range 1
+        falloff .5
+    }
+
+    DemonGrowl {  #testlevels: 5c-10, 5cx-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .6
+        pitch_range [.8, 1.2]
+    }
+
+    DemonAttack {  #testlevels: 5c-10, 5cx-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    Slither {  #testlevels: 2-2
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .7
+        pitch_range [.8, 1.2]
+
+        falloff .25
+    }
+
+    SlugCharge {  #testlevels: 2d-1, 2d-16
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [1, 1.4]
+    }
+
+    BigSlugCharge{ #FIX
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1.2
+        falloff .5
+        pitch_range [1,1.2]
+    }
+
+    FrogJump {  #testlevels: 2d-13, 2xd-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 4
+        pitch_range [.7, 1.3]
+    }
+
+    FishDash {  #testlevels: 3d-7, 8x-3
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+        pitch_range [.8, 1.2]
+    }
+
+    CannonFire {  #testlevels: 5a-1
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.20]
+    }
+
+    Shoot {  #testlevels: 5b-6, 5b-20, 5ax-2
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.5, .8]
+        falloff 1
+    }
+
+    Spit {  #testlevels: 4b-10
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+        pitch_range [.8, 1.2]
+        falloff .7
+    }
+
+    Laser {  #testlevels: 6-15
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+        pitch_range [.8, 1.2]
+    }
+
+    Spook {  #testlevels: 6-11, 6-13
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .8
+        falloff .3
+    }
+
+    SkullShatter {  #testlevels: 7x-4
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range[.9,1.1]
+    }
+
+    Unlock {  #testlevels: 5a-5x
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    SplatterSplat {  #testlevels: 3xd-6
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+        falloff .5
+    }
+
+    CheepBounce {  #testlevels: 3-5, 3xu-3
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .7
+        pitch_range [.8, 1.2]
+        falloff .5
+    }
+
+    CreepGrow {  #testlevels: 4b-15
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .9
+        pitch_range [.5, 1.2]
+        falloff .25
+    }
+
+    BouncerSplat {  #testlevels: 4c-7, 4c-8
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        falloff .8
+        pitch_range [.8, 1.2]
+    }
+
+    Thunder {  #testlevels: 3d-1, 7-1
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume_range [0,1]
+        pitch_range [.8, 1.2]
+        falloff 999
+        pan_falloff 999
+    }
+    
+    Nuke {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 8
+        falloff 999
+        pan_falloff 999
+    }
+
+    GhostMove {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        falloff 999
+        pan_falloff 999
+    }
+    
+    GhostChoose {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        falloff 999
+        pan_falloff 999
+    }
+    
+    GhostDelete {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        falloff 999
+        pan_falloff 999
+    }
+    
+    
+    NPCDefault {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+   
+    
+    NPCSkull {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    NPCBlob {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    NPCGhost {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    
+    
+    NPCSteven {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    
+    
+    NPCAether {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    NPCGish {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    NPCIsaac {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    NPCGuppy {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+    NPCStevenCameo {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+    }
+}

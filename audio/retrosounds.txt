@@ -1,0 +1,195 @@
+SetName RetroSounds
+Folder retrosfx
+
+SoundEffectBaseConstants { #relevant group properties are multiplied by these
+    volume 1
+    pitch 1
+    
+    pan_falloff_range [1, 54]
+    volume_falloff_range [10, 60]
+    
+    distance_scale [1, 1] # scales x, y distance by following value (so sound spreads farther horizontally than vertically, etc)
+    
+    falloff_mode linearsquare
+}
+
+SoundEffectGroups {
+    # Example {                                  # the name of the sound effect trigger for the engine to access (PlaySound("Example"))
+    #    files [file1.wav, file2.wav, file3.wav] # triggering this sound chooses 1 file from here at random
+    #    pitch 5                                 # shortcut for pitch_range [5,5]  (constant pitch)
+    #    volume 5                                # shortcut for volume_range [5,5] (constant volume)
+    #    pitch_range [.8, 1.2]                   # pitch randomized between .8 and 1.2
+    #    volume_range [.8, 1.2]                  # volume randomized between .8 and 1.2
+    #    falloff .5                              # multiplied by volume_falloff_range global setting
+    #    falloff_range [1, 1]                    # same but as a range [.5, 2] with a base settingh of [10, 20] results in a new range of [5, 40]
+    #    pan_falloff .5                          # multiplied by pan_falloff_range global setting (should not need)
+    #    pan_falloff_range [1, 1]                # same but as a range [.5, 2] with a base settingh of [10, 20] results in a new range of [5, 40] (should not need)
+    # }
+
+    #playersounds
+    Jump {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [1.2, 1.5]
+    }
+
+    Collide {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [.8, 1.2]
+    }
+
+    LandSoft {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+    
+    LandHard {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+    
+    LedgeGrab {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+    
+    Death {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+    UnderwaterDeath {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+    DrownDeath {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+    
+    Crash {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+    }
+    
+    Splash {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 6
+        pitch_range [.8, 1.2]
+    }
+
+    Boing {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+
+    EnemyBounce {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+    
+    
+    Drown1 {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 4
+    }
+    Drown2 {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 4
+    }
+    Drown3 {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 4
+    }
+    
+    CollectCoin{
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+    
+    Crumble {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+
+    Click {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+
+    RockSmash {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+    
+    SpikeToggle{
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        falloff 999
+        pan_falloff 999
+    }
+
+    BlockToggle{
+        files[frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        falloff 999
+        pan_falloff 999
+    }
+    
+    Shoot { 
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume .6
+        pitch_range [.8, 1.2]
+        falloff .7
+    }
+    
+    
+    WinCart { 
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 4
+    }
+    CrashThwamp {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        pitch_range [.8, 1.2]
+        volume 4
+    }
+
+    CrashHellThwamp {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        pitch_range [.8, 1.2]
+        volume 4
+    }
+    
+    ChompDash {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 4
+        pitch_range [.8, 1.2]
+    }
+    DemonAttack {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 2
+        pitch_range [.8, 1.2]
+    }
+    SlugCharge {
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 1
+        pitch_range [1, 1.4]
+    }
+    CreepGrow {  #testlevels: 4b-15
+        files [frogjump1.wav,frogjump2.wav,frogjump3.wav,frogjump4.wav,frogjump5.wav,frogjump5.wav,frogjump6.wav,frogjump7.wav,frogjump8.wav,frogjump9.wav]
+        volume 5
+        pitch_range [.5, 1.2]
+        falloff .25
+    }
+
+    
+}
